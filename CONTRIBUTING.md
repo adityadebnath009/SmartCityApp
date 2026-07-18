@@ -106,6 +106,16 @@ Before running the application, you must initialize the MySQL database:
    ```
 3. This will create the `smart_city_guide` database, the `users` table, and the `places` table, and it will insert a default admin user.
 
+ ### Updating Existing Databases
+
+If you already have an existing `smart_city_guide` database, run:
+
+```bash
+mysql -u root -p smart_city_guide < migrations/V2__add_email_column.sql
+```
+
+before starting the application.
+
 ### Build & Run
 
 ```bash
